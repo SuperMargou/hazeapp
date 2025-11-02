@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowa - Citations</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="./image/logo.png">
+  <link rel="apple-touch-icon" href="./image/logo.png">
+  <script src="https://kit.fontawesome.com/b57b6f573f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="logo-link" aria-label="Catho Wiki accueil">
+      <img src="./image/logo.png" alt="Catho Wiki logo" class="site-logo">
+    </a>
+    <button id="accountButton" aria-label="Compte" class="account-btn account-btn--icon">
+      <i class="fa-solid fa-user"></i>
+    </button>
+  </header>
+
+  <div id="popup-root"></div>
+
+  <main id="app">
+    <div id="quote-container">
+      <p id="quote-text">Quote will appear here.</p>
+      <p id="quote-author">Author</p>
+    </div>
+
+    <div id="buttons">
+      <button id="like-btn" aria-label="Like"><i class="fa-regular fa-heart fa-beat"></i></button>
+      <button id="share-btn" aria-label="Share"><i class="fa-regular fa-share-from-square fa-beat"></i></button>
+    </div>
+  </main>
+
+  <script type="module" src="./script.js?v=1"></script>
+</body>
+</html>

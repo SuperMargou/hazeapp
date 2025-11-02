@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon compte • Catho Wiki</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="./image/logo.png">
+  <link rel="apple-touch-icon" href="./image/logo.png">
+  <script src="https://kit.fontawesome.com/b57b6f573f.js" crossorigin="anonymous"></script>
+</head>
+<body class="account-page">
+  <header class="account-page__header">
+    <a href="./" class="logo-link" aria-label="Retour à l'accueil">
+      <img src="./image/logo.png" alt="Catho Wiki logo" class="site-logo">
+    </a>
+    <button id="homeButton" class="account-btn account-btn--icon" aria-label="Retour">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </header>
+
+  <div id="popup-root"></div>
+
+  <main class="account-page__content">
+    <section id="accountCard" class="account-card">
+      <div class="account-card__header">
+        <img id="accountAvatar" class="account-card__avatar" src="" alt="Photo de profil">
+        <div>
+          <h1 id="accountGreeting" class="account-card__title">Bonjour !</h1>
+          <p id="accountEmail" class="account-card__subtitle"></p>
+        </div>
+      </div>
+      <div class="account-card__actions">
+        <button id="logoutButton" class="account-card__button account-card__button--primary">Se déconnecter</button>
+        <button id="refreshLikesButton" class="account-card__button account-card__button--secondary">
+          Actualiser les likes
+        </button>
+      </div>
+    </section>
+
+    <section class="account-card">
+      <h2 style="margin-bottom:18px;">Mes citations likées</h2>
+      <div id="likesList" class="likes-grid"></div>
+      <p id="likesEmpty" class="no-likes" style="display:none;">Aucune citation enregistrée pour le moment.</p>
+    </section>
+  </main>
+
+  <script type="module" src="./account.js?v=1"></script>
+</body>
+</html>

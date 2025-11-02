@@ -1,0 +1,416 @@
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+html, body { height: 100%; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.site-header {
+  position: fixed;
+  top: clamp(14px, 2vh, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1024px, calc(100vw - clamp(24px, 8vw, 96px)));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(52px, 12vw, 72px);
+  height: clamp(52px, 12vw, 72px);
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f5f0e6;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.site-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.account-btn {
+  width: clamp(44px, 12vw, 64px);
+  height: clamp(44px, 12vw, 64px);
+  border: none;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+}
+
+.account-btn:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.account-btn--icon i {
+  pointer-events: none;
+}
+
+.account-btn--has-avatar {
+  background: transparent;
+  padding: 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.account-btn--has-avatar:hover {
+  background: transparent;
+}
+
+.account-btn__avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+body {
+  background-color: #f5f0e6;
+  font-family: 'JetBrains Mono', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  color: #000000;
+  padding: clamp(16px, 4vw, 32px);
+  padding-bottom: clamp(24px, 6vh, 40px);
+  box-sizing: border-box;
+}
+
+#app {
+  width: min(720px, calc(100vw - clamp(24px, 10vw, 120px)));
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(18px, 5vw, 28px);
+}
+
+button {
+  padding-inline: 15px;
+}
+
+#quote-container {
+  width: 100%;
+  text-align: center;
+  padding: clamp(14px, 4.5vw, 24px);
+  line-height: 1.5;
+  font-weight: 200;
+  font-size: 1.5rem;
+  transition: opacity 0.4s ease;
+  will-change: opacity;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 3.8vw, 18px);
+}
+
+#quote-text {
+  font-size: clamp(1.9rem, 4.8vw, 2.2rem);
+  line-height: 1.5;
+}
+
+#quote-author {
+  font-size: clamp(1.05rem, 3.2vw, 1.3rem);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(12px, 4vw, 20px);
+  margin-top: 0;
+}
+
+#buttons button {
+  font-size: clamp(1.4rem, 4vw, 1.7rem);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.2s ease;
+}
+
+#buttons button:hover {
+  transform: scale(1.1);
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+body.account-page {
+  display: block;
+  min-height: 100vh;
+  padding-top: clamp(120px, 14vh, 160px);
+}
+
+.account-page__header {
+  position: fixed;
+  top: clamp(14px, 2vh, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1024px, calc(100vw - clamp(24px, 8vw, 96px)));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 60;
+}
+
+.account-page__content {
+  width: min(900px, calc(100vw - clamp(32px, 10vw, 160px)));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 6vw, 40px);
+}
+
+.account-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 18px;
+  padding: clamp(20px, 6vw, 36px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.account-card__header {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 4vw, 24px);
+  margin-bottom: clamp(16px, 4vw, 24px);
+}
+
+.account-card__avatar {
+  width: clamp(64px, 20vw, 100px);
+  height: clamp(64px, 20vw, 100px);
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.account-card__title {
+  font-size: clamp(1.15rem, 3.8vw, 1.5rem);
+  font-weight: 400;
+}
+
+.account-card__subtitle {
+  font-size: clamp(0.9rem, 3.2vw, 1.05rem);
+  color: #444;
+  margin-top: 4px;
+}
+
+.account-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(12px, 3.5vw, 18px);
+  margin-top: clamp(16px, 4vw, 24px);
+}
+
+.account-card__button {
+  padding: clamp(10px, 3.5vw, 14px) clamp(16px, 6vw, 26px);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(0.92rem, 3.2vw, 1.05rem);
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-card__button--primary {
+  background: #111;
+  color: #fff;
+}
+
+.account-card__button--secondary {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #111;
+}
+
+.account-card__button:hover {
+  transform: translateY(-1px);
+}
+
+.likes-grid {
+  display: grid;
+  gap: clamp(16px, 5vw, 26px);
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+.like-item {
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 16px;
+  padding: clamp(18px, 4.5vw, 26px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  position: relative;
+}
+
+.like-item__text {
+  font-size: clamp(0.95rem, 3.4vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.like-item__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: clamp(12px, 3.5vw, 16px);
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  color: #555;
+  gap: 12px;
+}
+
+.like-item__author {
+  font-style: italic;
+}
+
+.like-item__delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a30000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.like-item__delete:hover {
+  background: rgba(163, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.like-item__delete i {
+  color: #a30000;
+}
+
+.no-likes {
+  color: #555;
+  text-align: center;
+  font-size: clamp(0.95rem, 3vw, 1.05rem);
+  margin-top: 16px;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 999;
+  animation: popup-fade-in 180ms ease;
+}
+
+.popup-card {
+  background: #fff;
+  color: #111;
+  border-radius: 12px;
+  padding: 14px 18px;
+  max-width: 92%;
+  width: clamp(280px, 70vw, 360px);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.popup-card p {
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.popup-actions button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.popup-actions .btn-primary {
+  background: #111;
+  color: #fff;
+}
+
+.popup-actions .btn-ghost {
+  background: transparent;
+  color: #111;
+  border: 1px solid #eee;
+}
+
+@keyframes popup-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  body {
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  #app {
+    margin-top: clamp(100px, 18vh, 140px);
+  }
+
+  .account-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .account-card__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .account-card__button {
+    width: 100%;
+  }
+}
+
+
