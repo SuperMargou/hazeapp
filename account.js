@@ -216,7 +216,7 @@ function applySignedOutState() {
   currentUser = null;
   if (avatarEl) {
     avatarEl.src = './image/logo.png';
-    avatarEl.alt = 'Logo Catho Wiki';
+    avatarEl.alt = 'Logo HazeApp';
     avatarEl.removeAttribute('referrerpolicy');
   }
   if (greetingEl) greetingEl.textContent = 'Bonjour !';
