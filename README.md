@@ -1,8 +1,8 @@
-#  **Haze – Citations App**
+#  **HazeApp – Citation**
 
 > *Une expérience minimaliste et apaisante autour de la lecture de citations inspirantes.*
 
-**Haze** est une application web élégante et fluide développée par **Cloud Roots Studio**, pensée pour offrir un instant de réflexion et de sérénité à travers des citations inspirantes.  
+**HazeApp** est une application web élégante et fluide développée par **Cloud Roots Studio**, pensée pour offrir un instant de réflexion et de sérénité à travers des citations inspirantes.
 L’interface épurée, optimisée pour mobile et desktop, permet de découvrir, aimer et partager des citations avec fluidité — le tout dans une ambiance douce et immersive.
 
 **Bientôt dispo sur le play store**
@@ -36,7 +36,7 @@ L’interface épurée, optimisée pour mobile et desktop, permet de découvrir,
 ### 1️⃣ **Cloner le projet**
 ```bash
 git clone https://github.com/CloudRoots/citation-app.git
-cd haze
+cd hazeapp
 ```
 
 ### 2️⃣ **Configurer Firebase**

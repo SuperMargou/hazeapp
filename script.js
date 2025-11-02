@@ -23,7 +23,7 @@ let lastTapTime = 0;
 let isFading = false;
 const actionQueue = [];
 
-console.info('[CathoWiki] UI script initialised', { host: window.location.host });
+console.info('[HazeApp] UI script initialised', { host: window.location.host });
 
 if (!container || !quoteText || !quoteAuthor || !likeBtn || !shareBtn || !accountButton) {
   console.error('Missing required DOM nodes.');
