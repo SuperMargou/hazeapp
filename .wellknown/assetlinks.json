@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "fr.cathowiki.haze",
+               "sha256_cert_fingerprints": ["50:2D:8B:FC:3E:A8:2B:E8:28:57:11:FC:31:E3:32:3A:0D:10:A6:24:09:AC:0A:DB:74:4F:15:14:B0:52:0F:3A"] }
+}]
